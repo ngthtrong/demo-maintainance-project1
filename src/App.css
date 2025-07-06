@@ -1,42 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* Trừ đi chiều cao navbar */
+  width: 100%;
+}
+
+.demo-placeholder {
   text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 15px;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  color: #7f8c8d;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Desktop và màn hình lớn hơn */
+@media (min-width: 1200px) {
+  .main-content {
+    padding: 3rem 2rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  .demo-placeholder {
+    max-width: 900px;
+    padding: 5rem 3rem;
+    font-size: 1.6rem;
   }
 }
 
-.card {
-  padding: 2em;
+@media (min-width: 1600px) {
+  .main-content {
+    padding: 4rem 2rem;
+  }
+  
+  .demo-placeholder {
+    max-width: 1000px;
+    padding: 6rem 4rem;
+    font-size: 1.8rem;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem 0;
+  }
+  
+  .demo-placeholder {
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0.5rem 0;
+  }
+  
+  .demo-placeholder {
+    padding: 1.5rem 0.75rem;
+    font-size: 1rem;
+  }
 }

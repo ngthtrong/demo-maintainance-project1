@@ -1,34 +1,39 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Navbar from './components/Navbar'
+import HotfixDemo from './components/HotfixDemo'
+import FeatureDemo from './components/FeatureDemo'
+import RevertDemo from './components/RevertDemo'
+import MergeConflictDemo from './components/MergeConflictDemo'
+import GitHubActionsDemo from './components/GitHubActionsDemo'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activeDemo, setActiveDemo] = useState(1)
+
+  const renderDemo = () => {
+    switch (activeDemo) {
+      case 1:
+        return <HotfixDemo />
+      case 2:
+        return <FeatureDemo />
+      case 3:
+        return <RevertDemo />
+      case 4:
+        return <MergeConflictDemo />
+      case 5:
+        return <GitHubActionsDemo />
+      default:
+        return <HotfixDemo />
+    }
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app">
+      <Navbar activeDemo={activeDemo} setActiveDemo={setActiveDemo} />
+      <main className="main-content">
+        {renderDemo()}
+      </main>
+    </div>
   )
 }
 

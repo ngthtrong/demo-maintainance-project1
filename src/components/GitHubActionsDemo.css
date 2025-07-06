@@ -1,0 +1,673 @@
+.github-actions-demo {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.demo-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.demo-header h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.demo-scenario {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+.demo-content {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.step-navigator {
+  margin-bottom: 2rem;
+}
+
+.step-navigator h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.step-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.step-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  background: white;
+  color: #666;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-btn:hover {
+  background: #f8f9fa;
+  border-color: #667eea;
+}
+
+.step-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+  transform: scale(1.1);
+}
+
+.step-btn.completed {
+  background: #27ae60;
+  color: white;
+  border-color: #27ae60;
+}
+
+.step-content {
+  margin-bottom: 2rem;
+}
+
+.step-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+}
+
+.step-header h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+.workflow-section {
+  margin-bottom: 2rem;
+}
+
+.workflow-section h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.workflow-file {
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.file-header {
+  background: #2d2d30;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+.file-name {
+  font-weight: 600;
+  color: #4fc3f7;
+}
+
+.toggle-btn {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: #005a9e;
+}
+
+.workflow-content {
+  padding: 1rem;
+}
+
+.workflow-code {
+  color: #cccccc;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+  overflow-x: auto;
+}
+
+.workflow-demo {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border: 1px solid #dee2e6;
+}
+
+.workflow-demo h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.workflow-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.simulate-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.simulate-btn.success {
+  background: #27ae60;
+  color: white;
+}
+
+.simulate-btn.success:hover {
+  background: #219a52;
+  transform: translateY(-2px);
+}
+
+.simulate-btn.failed {
+  background: #e74c3c;
+  color: white;
+}
+
+.simulate-btn.failed:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+.workflow-status {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.status-icon {
+  font-size: 1.2rem;
+}
+
+.status-text {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+  animation: progress 2s ease-in-out infinite;
+}
+
+@keyframes progress {
+  0% { width: 0; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+.explanation-section {
+  margin-bottom: 2rem;
+}
+
+.explanation-section h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.explanation-section p {
+  color: #34495e;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.highlight-note {
+  background: #e8f5e8;
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.highlight-note h4 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.highlight-note p {
+  color: #2e7d32;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.step-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+}
+
+.nav-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover:not(:disabled) {
+  background: #5a67d8;
+  transform: translateY(-2px);
+}
+
+.nav-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.step-indicator {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  font-weight: 600;
+}
+
+.github-interface {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.github-interface h3 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.github-mockup {
+  background: #f6f8fa;
+  border: 1px solid #d1d9e0;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.github-header {
+  background: white;
+  padding: 1rem;
+  border-bottom: 1px solid #d1d9e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pr-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pr-title h4 {
+  color: #0969da;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.pr-number {
+  color: #656d76;
+  font-size: 0.9rem;
+}
+
+.pr-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.pr-status.open {
+  background: #1f883d;
+  color: white;
+}
+
+.github-content {
+  padding: 1rem;
+}
+
+.pr-description {
+  margin-bottom: 1.5rem;
+  color: #656d76;
+  line-height: 1.6;
+}
+
+.checks-section {
+  margin-bottom: 1.5rem;
+}
+
+.checks-section h5 {
+  color: #1f2328;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: white;
+  border: 1px solid #d1d9e0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.check-icon {
+  font-size: 1.1rem;
+}
+
+.check-name {
+  color: #1f2328;
+  font-weight: 500;
+}
+
+.check-status {
+  color: #656d76;
+  flex-grow: 1;
+}
+
+.details-btn {
+  background: #f6f8fa;
+  border: 1px solid #d1d9e0;
+  color: #0969da;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.details-btn:hover {
+  background: #e7e9eb;
+}
+
+.merge-section {
+  padding: 1rem;
+  background: white;
+  border: 1px solid #d1d9e0;
+  border-radius: 6px;
+}
+
+.merge-btn {
+  background: #1f883d;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.merge-btn:hover:not(:disabled) {
+  background: #1a7f37;
+}
+
+.merge-btn:disabled {
+  background: #8c959f;
+  cursor: not-allowed;
+}
+
+.merge-btn.disabled {
+  background: #8c959f;
+  cursor: not-allowed;
+}
+
+.merge-blocked {
+  color: #cf222e;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.github-description {
+  text-align: center;
+  color: #7f8c8d;
+  font-style: italic;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.benefits-section {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.benefits-section h3 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit-item {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-item h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.benefit-item p {
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.advanced-features {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.advanced-features h3 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-item {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+.feature-item h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.feature-item p {
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .github-actions-demo {
+    padding: 0 0.5rem;
+  }
+  
+  .demo-header {
+    padding: 1rem;
+  }
+  
+  .demo-header h1 {
+    font-size: 2rem;
+  }
+  
+  .demo-content {
+    padding: 1rem;
+  }
+  
+  .step-buttons {
+    gap: 0.5rem;
+  }
+  
+  .step-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .step-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .workflow-controls {
+    flex-direction: column;
+  }
+  
+  .simulate-btn {
+    width: 100%;
+  }
+  
+  .github-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .check-item {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+}
