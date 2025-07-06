@@ -81,9 +81,9 @@ body {
   }
   
   .demo-placeholder {
-    padding: 2rem 1rem;
-    font-size: 1.2rem;
     margin: 0 1rem;
+    font-size: 1.2rem;
+    padding: 2rem 1rem;
   }
 }
 
@@ -93,7 +93,7 @@ body {
   }
   
   .demo-placeholder {
-    padding: 1.5rem 0.75rem;
     font-size: 1rem;
+    padding: 1.5rem 0.75rem;
   }
 }
