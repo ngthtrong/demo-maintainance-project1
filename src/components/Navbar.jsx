@@ -15,6 +15,7 @@ const Navbar = ({ activeDemo, setActiveDemo }) => {
       <div className="navbar-brand">
         <h1>Git Maintenance Demo</h1>
         <p>Minh họa các tính năng hỗ trợ bảo trì của Git</p>
+        <p>Giả sử dự án của chúng ta có hai nhánh chính: main (phiên bản sản phẩm ổn định) và develop (nhánh tích hợp các tính năng đang phát triển).</p>
       </div>
       <div className="navbar-menu">
         {demos.map(demo => (
