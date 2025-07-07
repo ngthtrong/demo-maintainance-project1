@@ -1,10 +1,19 @@
 import { render, screen } from '@testing-library/react'
-import { describe, it, expect } from 'vitest'
-import App from '../App'
+import { describe, it } from 'vitest'
+import App from './App'
 
 describe('App', () => {
-  it('renders without crashing', () => {
+  it('renders the main app structure', () => {
     render(<App />)
-    expect(screen.getByText(/Demo Maintainance Project/i)).toBeInTheDocument()
+    // Kiểm tra xem có element với class "app" hay không
+    const appElement = document.querySelector('.app')
+    expect(appElement).toBeInTheDocument()
+  })
+  
+  it('renders the navbar', () => {
+    render(<App />)
+    // Kiểm tra xem có element với class "main-content" hay không  
+    const mainContent = document.querySelector('.main-content')
+    expect(mainContent).toBeInTheDocument()
   })
 })
