@@ -1,0 +1,32 @@
+# .github/workflows/ci.yml
+name: Node.js CI
+
+# Kích hoạt workflow khi có Pull Request vào nhánh main hoặc develop
+on:
+  pull_request:
+    branches: ["main", "develop"]
+
+jobs:
+  build-and-test:
+    # Sử dụng máy ảo Ubuntu mới nhất để chạy
+    runs-on: ubuntu-latest
+
+    steps:
+      # Bước 1: Lấy mã nguồn của Pull Request về máy ảo
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+
+      # Bước 2: Cài đặt môi trường Node.js phiên bản 18
+      - name: Use Node.js 22.17.0
+        uses: actions/setup-node@v3
+        with:
+          node-version: "22.17.0"
+          cache: "npm"
+
+      # Bước 3: Cài đặt các thư viện cần thiết của dự án
+      - name: Install dependencies
+        run: npm install
+
+      # Bước 4: Chạy các bài kiểm thử tự động
+      - name: Run tests
+        run: npm test
