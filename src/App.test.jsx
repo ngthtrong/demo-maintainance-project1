@@ -7,13 +7,13 @@ describe('App', () => {
     const { container } = render(<App />)
     // Kiểm tra xem có element với class "app" hay không
     const appElement = container.querySelector('.app')
-    expect(appElement).toBeInTheDocument()
+    expect(appElement).toBeTruthy()
   })
   
   it('renders the navbar', () => {
     const { container } = render(<App />)
     // Kiểm tra xem có element với class "main-content" hay không  
     const mainContent = container.querySelector('.main-content')
-    expect(mainContent).toBeInTheDocument()
+    expect(mainContent).toBeTruthy()
   })
 })
