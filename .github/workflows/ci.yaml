@@ -4,7 +4,7 @@ name: Node.js CI
 # Kích hoạt workflow khi có Pull Request vào nhánh main hoặc develop
 on:
   pull_request:
-    branches: ["main", "develop"]
+    branches: ["main", "develop","demo-git-action"]
 
 jobs:
   build-and-test:
